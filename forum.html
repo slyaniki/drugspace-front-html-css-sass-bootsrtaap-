@@ -22,7 +22,39 @@
 </head>
 
 <body>
- 
+  <script>
+    function myFunction() {
+      // Declaration  des variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // trie alphabetique
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper  mb-3" style="color: rgb(58, 56, 56);">BIENVENUE SUR </span>
@@ -72,9 +104,22 @@
     <section class="page-section cta">
       <div class="container">
         <div class="row">
+          <div class="barderecherche">
+           
+           <input class="form-control" type="text"  id="myInput" onkeyup="myFunction()" placeholder="Rechercher un sujet" aria-label="Search"> 
+           <ul id="myUL" style="list-style: none;">
+            <li><a class="categorie" nav-link href="#"  style="text-decoration: none;" >Overdose</a></li>
+            <li><a class="categorie"href="#"  style="text-decoration: none;">Cocaine</a></li>
+          
+            <li><a class="categorie" href="#"  style="text-decoration: none;">Crack</a></li>
+            <li><a  class="categorie" href="#"  style="text-decoration: none;">Canabis</a></li>
+          </ul>
+          </div>
           <div class="col-xl-9 mx-auto">
             <div class="cta-inner  rounded">
+              
                 <div id="aniki">
+                 
                     <div class="">
                                         <div class="">
                                 <img alt="" class="" src="" width="35" height="35">                </div>
@@ -93,15 +138,7 @@
                              </div>
 
                 </div>
-                <script>
-                  function myFunction() {
-                    var x = document.createElement("TEXTAREA");
-                    var t = document.createTextNode("ecrivez votre réponse ici");
-                    x.appendChild(t);
-                    document.body.appendChild(x);
-                  }
-                  </script>
-              
+                
                   
             </div>
             <div class="cta-inner1  rounded">
@@ -220,4 +257,3 @@
 
 
  
-
