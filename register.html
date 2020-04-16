@@ -10,7 +10,7 @@
 
   <title>NodDrugSpace</title>
 
- 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -22,12 +22,44 @@
 </head>
 
 <body>
+  <script>
+    function myFunction() {
+      // Declaration  des variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // trie alphabetique
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper  mb-3" style="color: rgb(58, 56, 56);">BIENVENUE SUR </span>
     <span class="site-heading-lower" style="font-weight: bold;">No Drug's  <span class="text-primary"> Space</span> </span>
   </h1>
-
   
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
@@ -37,9 +69,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
+          <li class="nav-item  px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="index.html">Acceuil
-             
+            
             </a>
           </li>
           <li class="nav-item px-lg-4">
@@ -48,50 +80,163 @@
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="article.html">Article</a>
           </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="forum.html">Forum</a>
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="forum.html">Forum
+           
+            </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a  class="nav-link text-uppercase text-expanded " href="#" > login</a>
-        
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img src="https://scontent.fabj5-1.fna.fbcdn.net/v/t1.0-9/43681921_154740005474357_7235917328410476544_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_eui2=AeGq0JGvq0LmX6Nt1LXepus46tMHPjDkTU3q0wc-MORNTRzpP7tTR5Em-SI17KVIsgAwpEkbpW3al2rsawNfrsoT&_nc_ohc=CzYJ-WKL-SYAX8nlrxQ&_nc_ht=scontent.fabj5-1.fna&oh=26f1bf3b74cff91222326344027a511e&oe=5EB82EF2" class="rounded-circle z-depth-0"
+            alt="avatar image" width="30" height="30">
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+          aria-labelledby="navbarDropdownMenuLink-55">
+          <a class="dropdown-item" href="#">Profile</a>
+          
+          <a class="dropdown-item" href="#">Deconnection</a>
           </li>
         </ul>
-        
       </div>
     </div>
   </nav>
-  <section class="page-section clearfix">
-    <div class="container">
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="barderecherche">
+           
+           <input class="form-control" type="text"  id="myInput" onkeyup="myFunction()" placeholder="Rechercher un sujet" aria-label="Search"> 
+           <ul id="myUL" style="list-style: none;">
+            <li><a class="categorie" nav-link href="#"  style="text-decoration: none;" >Overdose</a></li>
+            <li><a class="categorie"href="#"  style="text-decoration: none;">Cocaine</a></li>
+          
+            <li><a class="categorie" href="#"  style="text-decoration: none;">Crack</a></li>
+            <li><a  class="categorie" href="#"  style="text-decoration: none;">Canabis</a></li>
+          </ul>
+          </div>
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner  rounded">
+              
+                <div id="aniki">
+                 
+                    <div class="">
+                                        <div class="">
+                                <img alt="" class="" src="" width="35" height="35">                </div>
+                                    <div class="">
+                            <strong>Le Pélican</strong>
+                        </div>
+            
+                        
+                        <div class="comment-meta commentmetadata">
+                            23 septembre 2019            </div>
+                    </div>
+            
+                    <div class="aniki">
+                        <p>Bonjour Nancy,</p>
+                        Bonjour. Je prends du tramadol ( 350mg/jour) depuis très longtemps pour une polyarthrite. J’ai une grosse poussée depuis quelques semaines et hier m’a rhumatologue m’a fait supprimer le tramadol et remplacer par un comprimé de valtran 100 retard le soir. Ce que j’ai fais hier. Aujourd’hui pas de tramadol ce matin. Je suis dans un état pas possible, chaud, froid, sueur, engourdissement, éternuements, fatigue intense,… Je ne sais pas quoi faire. Hier je lui ai parlé de ma peur du symptôme de sevrage et elle m’a répondue  » c’est possible ». Aidez moi. J’ai une fille qui a besoin de moi et ça plus ma maladie c’est insupportable. Donnez moi des conseils svp en plus vue ce que ça me fait là j’ai vraiment envie d’arrêter cette saloperie temps que je suis lancée.
+                             </div>
+
+                </div>
+                
+                  
+            </div>
+            <div class="cta-inner1  rounded">
+                  
+              <div>
+                 
+                <h6 class="nomuser1">Aniki</h6>
+                  <div class="">
+                    C'est la réponse aui est la hein !!!! je sais plus quoi ecrit tellemnt fatigué. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil mollitia perferendis quia incidunt quod iure dignissimos animi aut eligendi. Eius iure eligendi expedita dicta error, sunt molestias laboriosam officiis quis.
+                  </div>
+
+              </div>
+              
+            
+                
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="form-group purple-border">
+              <h6 class="nomuser">Aniki</h6>
+              <textarea class="form-control" id="exampleFormControlTextarea3" rows="2"></textarea>
+              
+            </div>
+            
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section about-heading">
+      <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+        <div class="about-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-upper">No drug's Space</span>
+                  <span class="section-heading-lower">notre plateforme</span>
+                </h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum odit veniam voluptas quod sapiente, sit atque placeat ipsa magnam velit fugit expedita nam animi earum, nisi labore ut blanditiis..</p>
+                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit <em>odit</em>Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam, labore rem reiciendis, repellat officiis nam quasi saepe sunt ducimus, velit inventore nemo ab perferendis laudantium mollitia ipsa aliquam quas..</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora, cum iure beatae voluptate expedita? Aliquid, numquam. Eligendi eaque tempora, fuga minus quia recusandae commodi ex impedit sint placeat hic?  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
    
-<form class="text-center border border-light p-6" action="#!">
-
-  <p class="h4 mb-4">Register</p>
-  
- 
-
-
- 
-  
-
-  <input type="text"  class="form-control mb-4" placeholder="Nom">
-
-  <input type="email"  class="form-control mb-4" placeholder="Email">
-
-  <input type="password"  class="form-control mb-4" placeholder="Password">
-
-  <input type="password"  class="form-control mb-4" placeholder=" Confirm Password">
-  
-
-  <button class="btn btn-info btn-block" type="submit">sign up</button>  
-
-
-</form>
-
-    </div>
-    
-  </section>
-
-
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright &copy; <a href="www.github.com/slyaniki">Aniki</a></p>
@@ -101,7 +246,14 @@
  
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+  </script>
 
 </body>
 
 </html>
+
+
+
+ 
